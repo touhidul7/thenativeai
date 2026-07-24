@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ModelRouteImport } from './routes/model'
+import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as CompaniesRouteImport } from './routes/companies'
 import { Route as AiOsRouteImport } from './routes/ai-os'
 import { Route as AcquisitionsRouteImport } from './routes/acquisitions'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const ModelRoute = ModelRouteImport.update({
   id: '/model',
   path: '/model',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeadershipRoute = LeadershipRouteImport.update({
+  id: '/leadership',
+  path: '/leadership',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompaniesRoute = CompaniesRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/acquisitions': typeof AcquisitionsRoute
   '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
+  '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/acquisitions': typeof AcquisitionsRoute
   '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
+  '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,28 @@ export interface FileRoutesById {
   '/acquisitions': typeof AcquisitionsRoute
   '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
+  '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/acquisitions' | '/ai-os' | '/companies' | '/model'
+  fullPaths:
+    | '/'
+    | '/acquisitions'
+    | '/ai-os'
+    | '/companies'
+    | '/leadership'
+    | '/model'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/acquisitions' | '/ai-os' | '/companies' | '/model'
-  id: '__root__' | '/' | '/acquisitions' | '/ai-os' | '/companies' | '/model'
+  to: '/' | '/acquisitions' | '/ai-os' | '/companies' | '/leadership' | '/model'
+  id:
+    | '__root__'
+    | '/'
+    | '/acquisitions'
+    | '/ai-os'
+    | '/companies'
+    | '/leadership'
+    | '/model'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +98,7 @@ export interface RootRouteChildren {
   AcquisitionsRoute: typeof AcquisitionsRoute
   AiOsRoute: typeof AiOsRoute
   CompaniesRoute: typeof CompaniesRoute
+  LeadershipRoute: typeof LeadershipRoute
   ModelRoute: typeof ModelRoute
 }
 
@@ -86,6 +109,13 @@ declare module '@tanstack/react-router' {
       path: '/model'
       fullPath: '/model'
       preLoaderRoute: typeof ModelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leadership': {
+      id: '/leadership'
+      path: '/leadership'
+      fullPath: '/leadership'
+      preLoaderRoute: typeof LeadershipRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/companies': {
@@ -124,6 +154,7 @@ const rootRouteChildren: RootRouteChildren = {
   AcquisitionsRoute: AcquisitionsRoute,
   AiOsRoute: AiOsRoute,
   CompaniesRoute: CompaniesRoute,
+  LeadershipRoute: LeadershipRoute,
   ModelRoute: ModelRoute,
 }
 export const routeTree = rootRouteImport
