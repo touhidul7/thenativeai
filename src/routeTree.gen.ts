@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ModelRouteImport } from './routes/model'
 import { Route as CompaniesRouteImport } from './routes/companies'
 import { Route as AiOsRouteImport } from './routes/ai-os'
+import { Route as AcquisitionsRouteImport } from './routes/acquisitions'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ModelRoute = ModelRouteImport.update({
@@ -29,6 +30,11 @@ const AiOsRoute = AiOsRouteImport.update({
   path: '/ai-os',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcquisitionsRoute = AcquisitionsRouteImport.update({
+  id: '/acquisitions',
+  path: '/acquisitions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +43,14 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acquisitions': typeof AcquisitionsRoute
   '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
   '/model': typeof ModelRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acquisitions': typeof AcquisitionsRoute
   '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
   '/model': typeof ModelRoute
@@ -50,20 +58,22 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acquisitions': typeof AcquisitionsRoute
   '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
   '/model': typeof ModelRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/ai-os' | '/companies' | '/model'
+  fullPaths: '/' | '/acquisitions' | '/ai-os' | '/companies' | '/model'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ai-os' | '/companies' | '/model'
-  id: '__root__' | '/' | '/ai-os' | '/companies' | '/model'
+  to: '/' | '/acquisitions' | '/ai-os' | '/companies' | '/model'
+  id: '__root__' | '/' | '/acquisitions' | '/ai-os' | '/companies' | '/model'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcquisitionsRoute: typeof AcquisitionsRoute
   AiOsRoute: typeof AiOsRoute
   CompaniesRoute: typeof CompaniesRoute
   ModelRoute: typeof ModelRoute
@@ -92,6 +102,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AiOsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acquisitions': {
+      id: '/acquisitions'
+      path: '/acquisitions'
+      fullPath: '/acquisitions'
+      preLoaderRoute: typeof AcquisitionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,6 +121,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcquisitionsRoute: AcquisitionsRoute,
   AiOsRoute: AiOsRoute,
   CompaniesRoute: CompaniesRoute,
   ModelRoute: ModelRoute,
