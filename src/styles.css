@@ -64,6 +64,7 @@
   --off-white: rgb(250, 250, 250);
   --white: rgb(255, 255, 255);
   --text-white: rgb(255, 255, 255);
+  --para-dark: rgb(82, 82, 92);
 
   /* Main Theme */
   --background: var(--off-white);
@@ -73,7 +74,7 @@
   --surface-2: var(--off-white);
 
   --ink: var(--dark);
-  --ink-muted: var(--light-gray);
+  --ink-muted: var(--para-dark);
   --hairline: var(--light-gray);
 
   --accent-warm: var(--dark);
