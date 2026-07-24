@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ModelRouteImport } from './routes/model'
 import { Route as CompaniesRouteImport } from './routes/companies'
+import { Route as AiOsRouteImport } from './routes/ai-os'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ModelRoute = ModelRouteImport.update({
@@ -23,6 +24,11 @@ const CompaniesRoute = CompaniesRouteImport.update({
   path: '/companies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiOsRoute = AiOsRouteImport.update({
+  id: '/ai-os',
+  path: '/ai-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
   '/model': typeof ModelRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
   '/model': typeof ModelRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-os': typeof AiOsRoute
   '/companies': typeof CompaniesRoute
   '/model': typeof ModelRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/companies' | '/model'
+  fullPaths: '/' | '/ai-os' | '/companies' | '/model'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/companies' | '/model'
-  id: '__root__' | '/' | '/companies' | '/model'
+  to: '/' | '/ai-os' | '/companies' | '/model'
+  id: '__root__' | '/' | '/ai-os' | '/companies' | '/model'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiOsRoute: typeof AiOsRoute
   CompaniesRoute: typeof CompaniesRoute
   ModelRoute: typeof ModelRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompaniesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-os': {
+      id: '/ai-os'
+      path: '/ai-os'
+      fullPath: '/ai-os'
+      preLoaderRoute: typeof AiOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiOsRoute: AiOsRoute,
   CompaniesRoute: CompaniesRoute,
   ModelRoute: ModelRoute,
 }
