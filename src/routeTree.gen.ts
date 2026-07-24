@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ModelRouteImport } from './routes/model'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as InsightsRouteImport } from './routes/insights'
@@ -18,6 +19,11 @@ import { Route as AiOsRouteImport } from './routes/ai-os'
 import { Route as AcquisitionsRouteImport } from './routes/acquisitions'
 import { Route as IndexRouteImport } from './routes/index'
 
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ModelRoute = ModelRouteImport.update({
   id: '/model',
   path: '/model',
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/privacy': typeof PrivacyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/privacy': typeof PrivacyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/privacy': typeof PrivacyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/leadership'
     | '/model'
+    | '/privacy'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/leadership'
     | '/model'
+    | '/privacy'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/leadership'
     | '/model'
+    | '/privacy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,10 +144,18 @@ export interface RootRouteChildren {
   InsightsRoute: typeof InsightsRoute
   LeadershipRoute: typeof LeadershipRoute
   ModelRoute: typeof ModelRoute
+  PrivacyRoute: typeof PrivacyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/model': {
       id: '/model'
       path: '/model'
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsRoute: InsightsRoute,
   LeadershipRoute: LeadershipRoute,
   ModelRoute: ModelRoute,
+  PrivacyRoute: PrivacyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
