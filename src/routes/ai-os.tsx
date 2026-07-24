@@ -145,7 +145,7 @@ function AiOsPage() {
       </Section>
 
       <section className="container-page py-24 md:py-32">
-        <h2 className="max-w-3xl font-display text-4xl md:text-6xl">
+        <h2 className="max-w-3xl font-display text-4xl md:text-4xl">
           Build once. Improve continuously. Share across the portfolio.
         </h2>
         <div className="mt-10">

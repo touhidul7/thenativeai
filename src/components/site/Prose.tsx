@@ -53,7 +53,7 @@ export function Section({
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-accent-warm">{eyebrow}</p>
         )}
         {title && (
-          <h2 className="max-w-3xl font-display text-3xl leading-tight md:text-5xl">{title}</h2>
+          <h2 className="max-w-3xl font-display text-2xl leading-tight md:text-3xl">{title}</h2>
         )}
         {lead && <p className="mt-6 max-w-2xl text-lg text-ink-muted">{lead}</p>}
         <div className={title || lead ? "mt-14" : ""}>{children}</div>
