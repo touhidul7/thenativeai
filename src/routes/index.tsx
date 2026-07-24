@@ -12,10 +12,10 @@ export const Route = createFileRoute("/")({
         content:
           "An AI-native holding company acquiring and building a portfolio of service businesses that operate more intelligently together.",
       },
-      { property: "og:title", content: "The Native AI Group" },
+      { property: "og:title", content: "The Native AI Group — We acquire and build AI-native companies" },
       {
         property: "og:description",
-        content: "Permanent ownership. Exceptional operators. Shared intelligence.",
+        content: "An AI-native holding company acquiring and building a portfolio of service businesses that operate more intelligently together.",
       },
     ],
   }),
