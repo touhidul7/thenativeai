@@ -2,7 +2,7 @@ export const site = {
   name: "The Native AI Group",
   short: "TNAG",
   location: "Ontario, Canada",
-  primaryMessage: "We acquire and build. We build AI-native companies.",
+  primaryMessage: "We build or acquire AI-native companies",
   supporting:
     "The Native AI Group acquires, builds and scales service companies designed around artificial intelligence, automation and exceptional operators.",
   supportingLine: "Permanent ownership. Exceptional operators. Shared intelligence.",

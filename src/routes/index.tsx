@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton, PageHero, Section } from "@/components/site/Prose";
 import { companies, modelSteps, site } from "@/lib/site-content";
@@ -29,9 +30,9 @@ function Home() {
         eyebrow="An AI-native holding company"
         title={
           <>
-            We acquire and build.
+            We build or acquire
             <br />
-            <span className="italic text-accent-warm">We build AI-native companies.</span>
+            <span className="italic text-accent-warm">AI-native companies.</span>
           </>
         }
         lead={
