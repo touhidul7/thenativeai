@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageHero, Section } from "@/components/site/Prose";
@@ -109,6 +110,8 @@ function InsightsPage() {
               <span className="mt-6 text-sm text-ink-muted">Full article coming soon</span>
             </article>
           ))}
+          {/* Grid Placeholders */}
+          <article className="bg-background"></article>
         </div>
       </Section>
 
