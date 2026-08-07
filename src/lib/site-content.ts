@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export const site = {
   name: "The Native AI Group",
   short: "TNAG",
@@ -16,7 +17,7 @@ export const site = {
 
 export const nav = [
   { to: "/model", label: "Our Model" },
-  { to: "/companies", label: "Companies" },
+  { to: "/portfolio", label: "Portfolio" },
   { to: "/ai-os", label: "AI OS" },
   { to: "/acquisitions", label: "Acquisitions" },
   { to: "/leadership", label: "Leadership" },
@@ -79,45 +80,45 @@ export const companies: Company[] = [
     cta: "Visit Feed",
   },
   {
-    slug: "attribute",
-    name: "Attribute",
-    category: "Performance Marketing",
-    tagline: "Performance marketing driven by measurable outcomes.",
+    slug: "voot-sales",
+    name: "Voot Sales",
+    category: "Outsourced Sales",
+    tagline: "Scalable outbound sales systems built to generate qualified opportunities.",
     blurb:
-      "Attribute helps businesses improve paid media performance, customer acquisition and marketing decision-making.",
+      "Voot Sales helps businesses generate leads, book qualified meetings and grow revenue through scalable sales systems and automation.",
     capabilities: [
-      "Paid search",
-      "Paid social",
-      "Campaign strategy",
-      "Analytics",
-      "Conversion tracking",
-      "Attribution",
-      "Performance reporting",
-      "Optimization",
+      "Lead generation",
+      "Appointment setting",
+      "Outbound prospecting",
+      "Email outreach",
+      "LinkedIn outreach",
+      "Sales automation",
+      "Pipeline development",
+      "Sales strategy",
     ],
-    role: "Performance marketing and analytics capability across the portfolio.",
-    cta: "Visit Attribute",
+    role: "Outsourced sales and lead generation capability across the portfolio.",
+    cta: "Visit Voot Sales",
   },
+
   {
-    slug: "accounting",
-    name: "Accounting Company",
+    slug: "spark-accounting",
+    name: "Spark Accounting",
     category: "Accounting and Finance",
-    tagline: "A stronger financial operating layer for growing businesses.",
+    tagline: "Clear financial support for growing businesses.",
     blurb:
-      "The accounting company will provide businesses with clear, timely and decision-useful financial support.",
+      "Spark Accounting helps small businesses gain financial clarity and control through bookkeeping, accounting, tax and fractional CFO services.",
     capabilities: [
       "Bookkeeping",
+      "Accounting",
+      "Tax services",
       "Financial reporting",
-      "Accounts payable and receivable",
-      "Management reporting",
-      "Budgeting",
+      "Fractional CFO services",
       "Cash-flow management",
-      "Controller support",
-      "Financial systems",
+      "Budgeting",
+      "Financial strategy",
     ],
-    role: "Recurring financial relationship with customers and portfolio companies.",
-    cta: "Coming Soon",
-    comingSoon: true,
+    role: "Accounting, finance and advisory capability for businesses and portfolio companies.",
+    cta: "Visit Spark Accounting",
   },
   {
     slug: "dealio",
@@ -185,18 +186,42 @@ export const modelSteps = [
 ] as const;
 
 export const osLayers = [
-  { n: "01", title: "Knowledge", body: "Organize and preserve the expertise held in people, documents, proposals and project history." },
-  { n: "02", title: "Data", body: "Connect sales, marketing, finance, projects, customers and delivery into a coherent operating view." },
-  { n: "03", title: "Workflows", body: "Make the important work visible, repeatable and reliable — from lead intake to retention." },
-  { n: "04", title: "Automation", body: "Automate repetitive, rules-based activity where it improves speed, consistency or accuracy." },
-  { n: "05", title: "AI Agents", body: "Sales, marketing, finance, operations and customer success agents supporting each team." },
-  { n: "06", title: "Human Oversight", body: "Operators review, approve and refine important outputs. Accountability stays with people." },
+  {
+    n: "01",
+    title: "Knowledge",
+    body: "Organize and preserve the expertise held in people, documents, proposals and project history.",
+  },
+  {
+    n: "02",
+    title: "Data",
+    body: "Connect sales, marketing, finance, projects, customers and delivery into a coherent operating view.",
+  },
+  {
+    n: "03",
+    title: "Workflows",
+    body: "Make the important work visible, repeatable and reliable — from lead intake to retention.",
+  },
+  {
+    n: "04",
+    title: "Automation",
+    body: "Automate repetitive, rules-based activity where it improves speed, consistency or accuracy.",
+  },
+  {
+    n: "05",
+    title: "AI Agents",
+    body: "Sales, marketing, finance, operations and customer success agents supporting each team.",
+  },
+  {
+    n: "06",
+    title: "Human Oversight",
+    body: "Operators review, approve and refine important outputs. Accountability stays with people.",
+  },
 ] as const;
 
 export const footerNav = {
   Company: [
     { label: "Our Model", to: "/model" },
-    { label: "Companies", to: "/companies" },
+    { label: "Portfolio", to: "/portfolio" },
     { label: "AI OS", to: "/ai-os" },
     { label: "Leadership", to: "/leadership" },
     { label: "Insights", to: "/insights" },

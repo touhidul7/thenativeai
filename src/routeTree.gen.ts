@@ -19,6 +19,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as ModelRouteImport } from './routes/model'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -73,6 +74,11 @@ const ModelRoute = ModelRouteImport.update({
   path: '/model',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/portfolio': typeof PortfolioRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/portfolio': typeof PortfolioRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -131,6 +139,7 @@ export interface FileRoutesById {
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/portfolio': typeof PortfolioRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/leadership'
     | '/model'
+    | '/portfolio'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -163,6 +173,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/leadership'
     | '/model'
+    | '/portfolio'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -178,6 +189,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/leadership'
     | '/model'
+    | '/portfolio'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -194,6 +206,7 @@ export interface RootRouteChildren {
   InsightsRoute: typeof InsightsRoute
   LeadershipRoute: typeof LeadershipRoute
   ModelRoute: typeof ModelRoute
+  PortfolioRoute: typeof PortfolioRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
@@ -271,6 +284,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModelRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
@@ -306,6 +326,7 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsRoute: InsightsRoute,
   LeadershipRoute: LeadershipRoute,
   ModelRoute: ModelRoute,
+  PortfolioRoute: PortfolioRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,

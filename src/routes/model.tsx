@@ -217,7 +217,7 @@ function ModelPage() {
           Strong companies. Shared intelligence. Long-term value.
         </h2>
         <div className="mt-10">
-          <CtaButton to="/companies">Explore Our Companies</CtaButton>
+          <CtaButton to="/portfolio">Explore Our Portfolio</CtaButton>
         </div>
       </section>
     </>

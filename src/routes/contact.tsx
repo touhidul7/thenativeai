@@ -20,7 +20,7 @@ export const Route = createFileRoute("/contact")({
 
 const paths = [
   { t: "Sell or transition your business", b: "Confidential conversations about acquisition and founder succession.", href: "/acquisitions#form" },
-  { t: "Work with a portfolio company", b: "Marketing, media, accounting, M&A advisory or AI implementation.", href: "/companies" },
+  { t: "Work with a portfolio company", b: "Marketing, media, accounting, M&A advisory or AI implementation.", href: "/portfolio" },
   { t: "Join the team", b: "Operators, functional leaders and specialists.", href: "#form" },
   { t: "Partner with us", b: "Advisors, capital partners, referral partners and vendors.", href: "#form" },
   { t: "Press or media", b: "Media inquiries and speaking engagements.", href: "#form" },

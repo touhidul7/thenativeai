@@ -2,16 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CtaButton, PageHero, Section } from "@/components/site/Prose";
 import { companies } from "@/lib/site-content";
 
-export const Route = createFileRoute("/companies")({
+export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio — The Native AI Group" },
+      { title: "Companies — The Native AI Group" },
       {
         name: "description",
         content:
           "Specialized service companies across marketing, creative, finance, advisory and AI implementation — connected by a shared operating platform.",
       },
-      { property: "og:title", content: "Portfolio — The Native AI Group" },
+      { property: "og:title", content: "Companies — The Native AI Group" },
       { property: "og:description", content: "Specialized companies. One shared platform." },
     ],
   }),

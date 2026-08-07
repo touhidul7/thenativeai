@@ -44,7 +44,7 @@ function Home() {
         }
       >
         <div className="flex flex-wrap items-center gap-3">
-          <CtaButton to="/companies">Explore Our Companies</CtaButton>
+          <CtaButton to="/portfolio">Explore Our Portfolio</CtaButton>
           <CtaButton to="/contact" variant="ghost">
             Partner With Us
           </CtaButton>
@@ -182,7 +182,7 @@ function Home() {
           ))}
         </div>
         <div className="mt-10">
-          <CtaButton to="/companies" variant="ghost">
+          <CtaButton to="/portfolio" variant="ghost">
             View all companies
           </CtaButton>
         </div>
