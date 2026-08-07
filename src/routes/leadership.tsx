@@ -19,7 +19,7 @@ export const Route = createFileRoute("/leadership")({
 
 const leaders = [
   { name: "Chris Chetty", title: "Founder", bio: "Verified biography to follow." },
-  { name: "Mark [Full Verified Name]", title: "Title to be confirmed", bio: "Verified biography to follow." },
+  { name: "Claudia Harvey", title: "COO", bio: "Verified biography to follow." },
 ];
 
 const culture = [

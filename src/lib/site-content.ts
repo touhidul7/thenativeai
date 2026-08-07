@@ -36,6 +36,7 @@ export type Company = {
   cta: string;
   href?: string;
   comingSoon?: boolean;
+  relationship: "owned" | "partner";
 };
 
 export const companies: Company[] = [
@@ -58,7 +59,10 @@ export const companies: Company[] = [
     ],
     role: "Customer acquisition and digital growth engine across the portfolio.",
     cta: "Visit Little Dragon",
+    href: "https://littledragon.ca/",
+    relationship: "owned",
   },
+
   {
     slug: "feed",
     name: "Feed",
@@ -78,7 +82,10 @@ export const companies: Company[] = [
     ],
     role: "Creative and content production for clients and portfolio companies.",
     cta: "Visit Feed",
+    href: "#",
+    relationship: "owned",
   },
+
   {
     slug: "voot-sales",
     name: "Voot Sales",
@@ -98,6 +105,8 @@ export const companies: Company[] = [
     ],
     role: "Outsourced sales and lead generation capability across the portfolio.",
     cta: "Visit Voot Sales",
+    href: "https://vootsales.com",
+    relationship: "owned",
   },
 
   {
@@ -119,27 +128,10 @@ export const companies: Company[] = [
     ],
     role: "Accounting, finance and advisory capability for businesses and portfolio companies.",
     cta: "Visit Spark Accounting",
+    href: "https://sparkaccountingpro.com",
+    relationship: "owned",
   },
-  {
-    slug: "dealio",
-    name: "Dealio Advisors",
-    category: "Advisory and M&A",
-    tagline: "Advisory for business owners, buyers and investors.",
-    blurb:
-      "Dealio Advisors helps entrepreneurs navigate acquisitions, sales, financing and strategic growth.",
-    capabilities: [
-      "Business sales",
-      "Acquisitions",
-      "Capital advisory",
-      "Financial modeling",
-      "Due diligence",
-      "Deal structuring",
-      "Strategic advisory",
-      "Succession planning",
-    ],
-    role: "Origination engine — owners, buyers and capital.",
-    cta: "Visit Dealio Advisors",
-  },
+
   {
     slug: "archos",
     name: "Archos Suite",
@@ -159,6 +151,54 @@ export const companies: Company[] = [
     ],
     role: "Internal research, AI OS build-out and portfolio deployment.",
     cta: "Visit Archos Suite",
+    href: "#",
+    relationship: "owned",
+  },
+
+  {
+    slug: "dealio",
+    name: "Dealio Advisors",
+    category: "Advisory and M&A",
+    tagline: "Advisory for business owners, buyers and investors.",
+    blurb:
+      "Dealio Advisors helps entrepreneurs navigate acquisitions, sales, financing and strategic growth.",
+    capabilities: [
+      "Business sales",
+      "Acquisitions",
+      "Capital advisory",
+      "Financial modeling",
+      "Due diligence",
+      "Deal structuring",
+      "Strategic advisory",
+      "Succession planning",
+    ],
+    role: "Strategic advisory and transaction partner supporting owners, buyers and capital.",
+    cta: "Visit Dealio Advisors",
+    href: "https://dealioadvisors.com/",
+    relationship: "partner",
+  },
+
+  {
+    slug: "on-the-verge",
+    name: "On The Verge",
+    category: "Strategy, Creative and AI",
+    tagline: "Strategy and execution built for meaningful growth.",
+    blurb:
+      "On The Verge helps organizations grow through strategic marketing, brand development, digital platforms, creative execution and AI-enabled systems.",
+    capabilities: [
+      "Strategic marketing",
+      "Brand development",
+      "Website design",
+      "Social media strategy",
+      "Public relations",
+      "Content and video production",
+      "AI integration",
+      "Community engagement",
+    ],
+    role: "Strategic growth, creative and technology partner extending capabilities across the portfolio.",
+    cta: "Visit On The Verge",
+    href: "https://otvconsulting.com",
+    relationship: "partner",
   },
 ];
 

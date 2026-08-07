@@ -13,10 +13,14 @@ export const Route = createFileRoute("/")({
         content:
           "An AI-native holding company acquiring and building a portfolio of service businesses that operate more intelligently together.",
       },
-      { property: "og:title", content: "The Native AI Group — We acquire and build AI-native companies" },
+      {
+        property: "og:title",
+        content: "The Native AI Group — We acquire and build AI-native companies",
+      },
       {
         property: "og:description",
-        content: "An AI-native holding company acquiring and building a portfolio of service businesses that operate more intelligently together.",
+        content:
+          "An AI-native holding company acquiring and building a portfolio of service businesses that operate more intelligently together.",
       },
     ],
   }),
@@ -37,9 +41,9 @@ function Home() {
         }
         lead={
           <>
-            The Native AI Group acquires established service businesses, builds new companies and equips
-            each one with shared AI, automation, data and operating capabilities. Together, our companies
-            become more productive, more scalable and more valuable.
+            The Native AI Group acquires established service businesses, builds new companies and
+            equips each one with shared AI, automation, data and operating capabilities. Together,
+            our companies become more productive, more scalable and more valuable.
           </>
         }
       >
@@ -49,7 +53,9 @@ function Home() {
             Partner With Us
           </CtaButton>
         </div>
-        <p className="mt-10 text-sm uppercase tracking-[0.24em] text-ink-muted">{site.supportingLine}</p>
+        <p className="mt-10 text-sm uppercase tracking-[0.24em] text-ink-muted">
+          {site.supportingLine}
+        </p>
       </PageHero>
 
       <Section
@@ -59,12 +65,12 @@ function Home() {
       >
         <div className="grid gap-8 md:grid-cols-2">
           <p className="text-lg text-ink-muted">
-            The Native AI Group brings together specialized service companies and gives them access to a
-            shared operating system, centralized capabilities and a growing body of knowledge.
+            The Native AI Group brings together specialized service companies and gives them access
+            to a shared operating system, centralized capabilities and a growing body of knowledge.
           </p>
           <p className="text-lg text-ink-muted">
-            Each company retains its identity, expertise and customer relationships. At the same time, it
-            becomes part of a larger platform built to learn, improve and grow together.
+            Each company retains its identity, expertise and customer relationships. At the same
+            time, it becomes part of a larger platform built to learn, improve and grow together.
           </p>
         </div>
       </Section>
@@ -74,9 +80,10 @@ function Home() {
           <div className="group relative rounded-2xl border border-hairline bg-surface p-8 transition-colors hover:border-accent-warm/60">
             <p className="font-display text-2xl text-accent-warm">We acquire</p>
             <p className="mt-4 text-ink-muted">
-              We acquire profitable, founder-led service businesses with strong customer relationships,
-              recurring revenue and meaningful growth potential. We preserve what made the company successful
-              while helping it become more efficient, scalable and resilient.
+              We acquire profitable, founder-led service businesses with strong customer
+              relationships, recurring revenue and meaningful growth potential. We preserve what
+              made the company successful while helping it become more efficient, scalable and
+              resilient.
             </p>
             <Link
               to="/acquisitions"
@@ -88,9 +95,10 @@ function Home() {
           <div className="group relative rounded-2xl border border-hairline bg-surface p-8 transition-colors hover:border-accent-warm/60">
             <p className="font-display text-2xl text-accent-warm">We build</p>
             <p className="mt-4 text-ink-muted">
-              We launch new AI-native service companies around strong operators, attractive markets and
-              opportunities where our platform can create an immediate advantage. New companies begin with
-              access to shared infrastructure, portfolio relationships and proven operating capabilities.
+              We launch new AI-native service companies around strong operators, attractive markets
+              and opportunities where our platform can create an immediate advantage. New companies
+              begin with access to shared infrastructure, portfolio relationships and proven
+              operating capabilities.
             </p>
             <Link
               to="/contact"
@@ -122,10 +130,10 @@ function Home() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <p className="text-lg text-ink-muted">
-              An AI-native company is not simply a traditional business that uses a few AI tools. It is
-              designed around a fundamentally different way of working — structured data, connected
-              workflows, automation and human oversight combined to improve how work is sold, delivered,
-              measured and refined.
+              An AI-native company is not simply a traditional business that uses a few AI tools. It
+              is designed around a fundamentally different way of working — structured data,
+              connected workflows, automation and human oversight combined to improve how work is
+              sold, delivered, measured and refined.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -142,7 +150,9 @@ function Home() {
             </div>
             <div className="rounded-xl border border-accent-warm/40 bg-accent-warm/5 p-6">
               <p className="font-display text-xl text-accent-warm">AI-native</p>
-              <p className="mt-1 text-xs uppercase tracking-widest text-ink-muted">Scales intelligence</p>
+              <p className="mt-1 text-xs uppercase tracking-widest text-ink-muted">
+                Scales intelligence
+              </p>
               <ul className="mt-4 space-y-2 text-sm text-ink-muted">
                 <li>Connected data</li>
                 <li>Automated workflows</li>
@@ -154,7 +164,8 @@ function Home() {
           </div>
         </div>
         <blockquote className="mt-14 max-w-3xl border-l-2 border-accent-warm pl-6 font-display text-2xl italic leading-snug text-foreground">
-          We are not removing people from service businesses. We are giving great people better systems.
+          We are not removing people from service businesses. We are giving great people better
+          systems.
         </blockquote>
       </Section>
 
@@ -169,7 +180,9 @@ function Home() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-display text-2xl text-foreground">{c.name}</p>
-                  <p className="mt-1 text-xs uppercase tracking-widest text-accent-warm">{c.category}</p>
+                  <p className="mt-1 text-xs uppercase tracking-widest text-accent-warm">
+                    {c.category}
+                  </p>
                 </div>
                 {c.comingSoon && (
                   <span className="rounded-full border border-hairline px-2 py-1 text-[10px] uppercase tracking-widest text-ink-muted">
@@ -180,6 +193,9 @@ function Home() {
               <p className="mt-4 text-sm text-ink-muted">{c.blurb}</p>
             </div>
           ))}
+          {/* Grid Placeholders */}
+          <div className="flex flex-col bg-background"></div>
+          <div className="flex flex-col bg-background"></div>
         </div>
         <div className="mt-10">
           <CtaButton to="/portfolio" variant="ghost">
@@ -191,8 +207,8 @@ function Home() {
       <Section eyebrow="Shared intelligence" title="More than a collection of companies">
         <div className="grid gap-8 md:grid-cols-2">
           <p className="text-lg text-ink-muted">
-            Traditional holding companies share capital. The Native AI Group shares capital, capabilities,
-            data, relationships and intelligence.
+            Traditional holding companies share capital. The Native AI Group shares capital,
+            capabilities, data, relationships and intelligence.
           </p>
           <ul className="grid grid-cols-2 gap-3 text-sm text-foreground">
             {[
@@ -218,10 +234,10 @@ function Home() {
       <Section eyebrow="Founder partnership" title="A long-term home for exceptional businesses">
         <div className="grid gap-8 md:grid-cols-2">
           <p className="text-lg text-ink-muted">
-            We believe the strongest companies are built around trust, expertise and long-standing customer
-            relationships. We do not acquire companies simply to strip away what made them valuable — we aim
-            to preserve their identity, retain key operators and provide the infrastructure needed for the
-            next stage of growth.
+            We believe the strongest companies are built around trust, expertise and long-standing
+            customer relationships. We do not acquire companies simply to strip away what made them
+            valuable — we aim to preserve their identity, retain key operators and provide the
+            infrastructure needed for the next stage of growth.
           </p>
           <div>
             <p className="text-xs uppercase tracking-widest text-ink-muted">
@@ -302,8 +318,8 @@ function Home() {
           ))}
         </div>
         <p className="mt-8 max-w-2xl text-ink-muted">
-          We enter a sector when we find the right operator, the right business and a clear opportunity for
-          our shared platform to create value.
+          We enter a sector when we find the right operator, the right business and a clear
+          opportunity for our shared platform to create value.
         </p>
       </Section>
 
@@ -313,8 +329,8 @@ function Home() {
             Build the next generation with us.
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-ink-muted">
-            Whether you are looking to sell a company, operate one, build a new business or invest in the
-            platform, we would like to hear from you.
+            Whether you are looking to sell a company, operate one, build a new business or invest
+            in the platform, we would like to hear from you.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <CtaButton to="/contact">Partner With Us</CtaButton>
