@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaButton, PageHero, Section } from "@/components/site/Prose";
 
@@ -18,8 +19,8 @@ export const Route = createFileRoute("/leadership")({
 });
 
 const leaders = [
-  { name: "Chris Chetty", title: "Founder", bio: "Verified biography to follow." },
-  { name: "Claudia Harvey", title: "COO", bio: "Verified biography to follow." },
+  { name: "Chris Chetty", title: "Founder", linkedin: "https://www.linkedin.com/in/chrischetty/" },
+  { name: "Claudia Harvey", title: "COO", linkedin: "https://www.linkedin.com/in/claudiaharvey/", url: "http://claudiaharvey.com" },
 ];
 
 const culture = [
@@ -51,22 +52,43 @@ function LeadershipPage() {
                   .join("")
                   .slice(0, 2)}
               </div>
-              <p className="mt-6 font-display text-2xl text-foreground">{l.name}</p>
+              <p className="mt-6 font-display text-2xl text-foreground">
+                <a href={l.url}>{l.name}</a>
+              </p>
               <p className="mt-1 text-sm uppercase tracking-widest text-accent-warm">{l.title}</p>
-              <p className="mt-4 text-ink-muted">{l.bio}</p>
+              {/* <p className="mt-4 text-ink-muted">{l.bio}</p> */}
+              {l.linkedin ? (
+                <a
+                  href={l.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Visit ${l.name} on LinkedIn`}
+                  className="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-hairline bg-background text-accent-warm transition hover:border-accent-warm/40 hover:text-accent-warm"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                  >
+                    <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.68H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.56 20.45h3.57V9H3.56v11.45z" />
+                  </svg>
+                </a>
+              ) : null}
             </div>
           ))}
         </div>
         <p className="mt-8 max-w-2xl text-sm text-ink-muted">
-          Additional leadership profiles will be added as bios are verified. We do not publish credentials or
-          titles until confirmed with the individual.
+          Additional leadership profiles will be added as bios are verified. We do not publish
+          credentials or titles until confirmed with the individual.
         </p>
       </Section>
 
       <Section eyebrow="Operating leaders" title="Portfolio company leadership">
         <p className="max-w-3xl text-ink-muted">
-          Each portfolio company is led by an experienced operator with deep expertise in their category.
-          Individual profiles are published on each company's site as they are confirmed.
+          Each portfolio company is led by an experienced operator with deep expertise in their
+          category. Individual profiles are published on each company's site as they are confirmed.
         </p>
       </Section>
 
@@ -87,7 +109,10 @@ function LeadershipPage() {
             "Governance",
             "Capital markets",
           ].map((s) => (
-            <span key={s} className="rounded-full border border-hairline px-4 py-2 text-sm text-foreground">
+            <span
+              key={s}
+              className="rounded-full border border-hairline px-4 py-2 text-sm text-foreground"
+            >
               {s}
             </span>
           ))}
@@ -106,9 +131,12 @@ function LeadershipPage() {
       </Section>
 
       <section className="container-page py-24 md:py-32">
-        <h2 className="max-w-3xl font-display text-4xl md:text-6xl">Interested in building with us?</h2>
+        <h2 className="max-w-3xl font-display text-4xl md:text-6xl">
+          Interested in building with us?
+        </h2>
         <p className="mt-6 max-w-2xl text-lg text-ink-muted">
-          We are always interested in meeting experienced operators, founders and functional leaders.
+          We are always interested in meeting experienced operators, founders and functional
+          leaders.
         </p>
         <div className="mt-10">
           <CtaButton to="/contact">Explore Opportunities</CtaButton>
