@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
+import { site } from "@/lib/site-content";
 import { Footer } from "@/components/site/Footer";
 
 function NotFoundComponent() {
@@ -79,25 +80,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "The Native AI Group — We build or acquire AI-native companies" },
+      { title: `${site.name} — Launch, acquire and partner` },
       {
         name: "description",
-        content:
-          "An AI-native holding company acquiring and building a portfolio of service businesses that operate more intelligently together.",
+        content: site.supporting,
       },
       { name: "author", content: "The Native AI Group" },
-      { property: "og:title", content: "The Native AI Group — We acquire and build AI-native companies" },
+      { property: "og:title", content: `${site.name} — Launch, acquire and partner` },
       {
         property: "og:description",
-        content:
-          "An AI-native holding company acquiring and building a portfolio of service businesses that operate more intelligently together.",
+        content: site.supporting,
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "The Native AI Group — We acquire and build AI-native companies" },
-      { name: "twitter:description", content: "An AI-native holding company acquiring and building a portfolio of service businesses that operate more intelligently together." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/43a03edf-8bc9-467f-b525-a3d15679a33e/id-preview-1da7b889--a758a3b5-8547-4628-ab82-98a082a41e35.lovable.app-1784882679343.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/43a03edf-8bc9-467f-b525-a3d15679a33e/id-preview-1da7b889--a758a3b5-8547-4628-ab82-98a082a41e35.lovable.app-1784882679343.png" },
+      { name: "twitter:title", content: `${site.name} — Launch, acquire and partner` },
+      { name: "twitter:description", content: site.supporting },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/43a03edf-8bc9-467f-b525-a3d15679a33e/id-preview-1da7b889--a758a3b5-8547-4628-ab82-98a082a41e35.lovable.app-1784882679343.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/43a03edf-8bc9-467f-b525-a3d15679a33e/id-preview-1da7b889--a758a3b5-8547-4628-ab82-98a082a41e35.lovable.app-1784882679343.png",
+      },
     ],
     links: [
       {

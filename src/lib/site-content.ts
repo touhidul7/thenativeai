@@ -1,11 +1,11 @@
-/* eslint-disable prettier/prettier */
 export const site = {
   name: "The Native AI Group",
   short: "TNAG",
   location: "Ontario, Canada",
-  primaryMessage: "We build or acquire AI-native companies",
+  primaryMessage:
+    "We launch, acquire or partner with service businesses and run them as AI-native companies.",
   supporting:
-    "The Native AI Group acquires, builds and scales service companies designed around artificial intelligence, automation and exceptional operators.",
+    "The Native AI Group is a portfolio of service companies, each powered by a shared AI operating system. However a company joins the group, it grows the same way: with better systems.",
   supportingLine: "Permanent ownership. Exceptional operators. Shared intelligence.",
   emails: {
     general: "hello@nativeai.group",
@@ -17,9 +17,9 @@ export const site = {
 
 export const nav = [
   { to: "/model", label: "Our Model" },
-  { to: "/portfolio", label: "Portfolio" },
   { to: "/ai-os", label: "AI OS" },
-  { to: "/acquisitions", label: "Acquisitions" },
+  { to: "/deal-structures", label: "Deal Structures" },
+  { to: "/portfolio", label: "Portfolio" },
   { to: "/leadership", label: "Leadership" },
   { to: "/insights", label: "Insights" },
   { to: "/contact", label: "Contact" },
@@ -42,11 +42,11 @@ export type Company = {
 export const companies: Company[] = [
   {
     slug: "little-dragon",
-    name: "Little Dragon",
+    name: "Little Dragon Media",
     category: "Digital Marketing",
     tagline: "Digital marketing built for growth.",
     blurb:
-      "Little Dragon helps businesses attract customers, strengthen their digital presence and build repeatable growth systems.",
+      "Helps businesses attract customers, strengthen their digital presence, and build repeatable growth systems.",
     capabilities: [
       "Search engine optimization",
       "Paid advertising",
@@ -58,18 +58,18 @@ export const companies: Company[] = [
       "Digital strategy",
     ],
     role: "Customer acquisition and digital growth engine across the portfolio.",
-    cta: "Visit Little Dragon",
+    cta: "Visit Little Dragon Media",
     href: "https://littledragon.ca/",
     relationship: "owned",
   },
 
   {
     slug: "feed",
-    name: "Feed",
+    name: "FEED",
     category: "Content and Creative",
     tagline: "Content and creative production at scale.",
     blurb:
-      "Feed helps businesses communicate more effectively through high-quality content, creative production and brand execution.",
+      "Helps businesses communicate more effectively through high-quality content, creative production, and brand execution.",
     capabilities: [
       "Content strategy",
       "Video production",
@@ -81,7 +81,7 @@ export const companies: Company[] = [
       "Production support",
     ],
     role: "Creative and content production for clients and portfolio companies.",
-    cta: "Visit Feed",
+    cta: "Visit FEED",
     href: "#",
     relationship: "owned",
   },
@@ -92,7 +92,7 @@ export const companies: Company[] = [
     category: "Outsourced Sales",
     tagline: "Scalable outbound sales systems built to generate qualified opportunities.",
     blurb:
-      "Voot Sales helps businesses generate leads, book qualified meetings and grow revenue through scalable sales systems and automation.",
+      "Helps businesses generate leads, book qualified meetings, and grow revenue through scalable sales systems and automation.",
     capabilities: [
       "Lead generation",
       "Appointment setting",
@@ -115,7 +115,7 @@ export const companies: Company[] = [
     category: "Accounting and Finance",
     tagline: "Clear financial support for growing businesses.",
     blurb:
-      "Spark Accounting helps small businesses gain financial clarity and control through bookkeeping, accounting, tax and fractional CFO services.",
+      "Helps small businesses gain financial clarity and control through bookkeeping, accounting, tax, and fractional CFO services.",
     capabilities: [
       "Bookkeeping",
       "Accounting",
@@ -138,7 +138,7 @@ export const companies: Company[] = [
     category: "AI Consulting and Implementation",
     tagline: "AI transformation, designed and deployed.",
     blurb:
-      "Archos Suite designs and deploys practical AI systems, automations and operating workflows.",
+      "Designs and deploys the AI systems, automations, and operating workflows used across the group.",
     capabilities: [
       "AI strategy",
       "Workflow automation",
@@ -160,8 +160,7 @@ export const companies: Company[] = [
     name: "Dealio Advisors",
     category: "Advisory and M&A",
     tagline: "Advisory for business owners, buyers and investors.",
-    blurb:
-      "Dealio Advisors helps entrepreneurs navigate acquisitions, sales, financing and strategic growth.",
+    blurb: "Helps entrepreneurs navigate acquisitions, sales, financing, and strategic growth.",
     capabilities: [
       "Business sales",
       "Acquisitions",
@@ -181,10 +180,10 @@ export const companies: Company[] = [
   {
     slug: "on-the-verge",
     name: "On The Verge",
-    category: "Strategy, Creative and AI",
+    category: "Strategy, Creative & AI",
     tagline: "Strategy and execution built for meaningful growth.",
     blurb:
-      "On The Verge helps organizations grow through strategic marketing, brand development, digital platforms, creative execution and AI-enabled systems.",
+      "Helps organizations grow through strategic marketing, brand development, digital platforms, creative execution, and AI-enabled systems.",
     capabilities: [
       "Strategic marketing",
       "Brand development",
@@ -261,8 +260,9 @@ export const osLayers = [
 export const footerNav = {
   Company: [
     { label: "Our Model", to: "/model" },
-    { label: "Portfolio", to: "/portfolio" },
     { label: "AI OS", to: "/ai-os" },
+    { label: "Deal Structures", to: "/deal-structures" },
+    { label: "Portfolio", to: "/portfolio" },
     { label: "Leadership", to: "/leadership" },
     { label: "Insights", to: "/insights" },
   ],

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "";
+const BASE_URL = "https://acquisitions.thenativeaigroup.com";
 
 interface SitemapEntry {
   path: string;
@@ -18,6 +18,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/model", changefreq: "monthly", priority: "0.9" },
           { path: "/portfolio", changefreq: "monthly", priority: "0.9" },
           { path: "/ai-os", changefreq: "monthly", priority: "0.9" },
+          { path: "/deal-structures", changefreq: "monthly", priority: "0.9" },
           { path: "/acquisitions", changefreq: "monthly", priority: "0.9" },
           { path: "/leadership", changefreq: "monthly", priority: "0.7" },
           { path: "/insights", changefreq: "weekly", priority: "0.7" },

@@ -16,6 +16,7 @@ import { Route as AiOsRouteImport } from './routes/ai-os'
 import { Route as CompaniesRouteImport } from './routes/companies'
 import { Route as ConfidentialityRouteImport } from './routes/confidentiality'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DealStructuresRouteImport } from './routes/deal-structures'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as ModelRouteImport } from './routes/model'
@@ -57,6 +58,11 @@ const ConfidentialityRoute = ConfidentialityRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DealStructuresRoute = DealStructuresRouteImport.update({
+  id: '/deal-structures',
+  path: '/deal-structures',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InsightsRoute = InsightsRouteImport.update({
@@ -103,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/companies': typeof CompaniesRoute
   '/confidentiality': typeof ConfidentialityRoute
   '/contact': typeof ContactRoute
+  '/deal-structures': typeof DealStructuresRoute
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
@@ -119,6 +126,7 @@ export interface FileRoutesByTo {
   '/companies': typeof CompaniesRoute
   '/confidentiality': typeof ConfidentialityRoute
   '/contact': typeof ContactRoute
+  '/deal-structures': typeof DealStructuresRoute
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
@@ -136,6 +144,7 @@ export interface FileRoutesById {
   '/companies': typeof CompaniesRoute
   '/confidentiality': typeof ConfidentialityRoute
   '/contact': typeof ContactRoute
+  '/deal-structures': typeof DealStructuresRoute
   '/insights': typeof InsightsRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
@@ -154,6 +163,7 @@ export interface FileRouteTypes {
     | '/companies'
     | '/confidentiality'
     | '/contact'
+    | '/deal-structures'
     | '/insights'
     | '/leadership'
     | '/model'
@@ -170,6 +180,7 @@ export interface FileRouteTypes {
     | '/companies'
     | '/confidentiality'
     | '/contact'
+    | '/deal-structures'
     | '/insights'
     | '/leadership'
     | '/model'
@@ -186,6 +197,7 @@ export interface FileRouteTypes {
     | '/companies'
     | '/confidentiality'
     | '/contact'
+    | '/deal-structures'
     | '/insights'
     | '/leadership'
     | '/model'
@@ -203,6 +215,7 @@ export interface RootRouteChildren {
   CompaniesRoute: typeof CompaniesRoute
   ConfidentialityRoute: typeof ConfidentialityRoute
   ContactRoute: typeof ContactRoute
+  DealStructuresRoute: typeof DealStructuresRoute
   InsightsRoute: typeof InsightsRoute
   LeadershipRoute: typeof LeadershipRoute
   ModelRoute: typeof ModelRoute
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deal-structures': {
+      id: '/deal-structures'
+      path: '/deal-structures'
+      fullPath: '/deal-structures'
+      preLoaderRoute: typeof DealStructuresRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insights': {
@@ -323,6 +343,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompaniesRoute: CompaniesRoute,
   ConfidentialityRoute: ConfidentialityRoute,
   ContactRoute: ContactRoute,
+  DealStructuresRoute: DealStructuresRoute,
   InsightsRoute: InsightsRoute,
   LeadershipRoute: LeadershipRoute,
   ModelRoute: ModelRoute,

@@ -11,18 +11,23 @@ export function Footer() {
             <span>{site.name}</span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-ink-muted">
-            We acquire established service businesses, build new companies and equip each one with shared AI,
-            automation and operating capabilities.
+            We launch, acquire, and partner with service businesses, equipping each one with shared
+            AI, automation, and operating capabilities.
           </p>
           <p className="mt-6 text-xs uppercase tracking-widest text-ink-muted">{site.location}</p>
         </div>
         {Object.entries(footerNav).map(([heading, items]) => (
           <div key={heading}>
-            <h3 className="text-xs font-medium uppercase tracking-widest text-ink-muted">{heading}</h3>
+            <h3 className="text-xs font-medium uppercase tracking-widest text-ink-muted">
+              {heading}
+            </h3>
             <ul className="mt-4 space-y-3 text-sm">
               {items.map((item) => (
                 <li key={item.label}>
-                  <Link to={item.to} className="text-foreground/85 transition-colors hover:text-accent-warm">
+                  <Link
+                    to={item.to}
+                    className="text-foreground/85 transition-colors hover:text-accent-warm"
+                  >
                     {item.label}
                   </Link>
                 </li>
