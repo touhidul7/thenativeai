@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CtaButton, PageHero, Section } from "@/components/site/Prose";
@@ -20,12 +19,30 @@ export const Route = createFileRoute("/acquisitions")({
 });
 
 const process = [
-  { t: "Introductory conversation", b: "A confidential discussion about the company, your objectives and whether there may be a fit." },
-  { t: "Initial review", b: "We review high-level financial, operational and customer information." },
-  { t: "Indication of interest", b: "If there is alignment, we outline a proposed valuation range and transaction structure." },
-  { t: "Due diligence", b: "We work through financial, legal, operational and commercial diligence." },
-  { t: "Definitive agreement", b: "The parties agree on final terms, responsibilities and transition plans." },
-  { t: "Closing and transition", b: "We complete the transaction and begin the integration plan with the founder and team." },
+  {
+    t: "Introductory conversation",
+    b: "A confidential discussion about the company, your objectives and whether there may be a fit.",
+  },
+  {
+    t: "Initial review",
+    b: "We review high-level financial, operational and customer information.",
+  },
+  {
+    t: "Indication of interest",
+    b: "If there is alignment, we outline a proposed valuation range and transaction structure.",
+  },
+  {
+    t: "Due diligence",
+    b: "We work through financial, legal, operational and commercial diligence.",
+  },
+  {
+    t: "Definitive agreement",
+    b: "The parties agree on final terms, responsibilities and transition plans.",
+  },
+  {
+    t: "Closing and transition",
+    b: "We complete the transaction and begin the integration plan with the founder and team.",
+  },
 ];
 
 function AcqPage() {
@@ -43,13 +60,13 @@ function AcqPage() {
       <Section eyebrow="Founder message" title="You have built more than a business">
         <div className="grid gap-8 md:grid-cols-2">
           <p className="text-lg text-ink-muted">
-            You have built customer relationships, a team, a reputation and a way of working that cannot be
-            recreated overnight.
+            You have built customer relationships, a team, a reputation and a way of working that
+            cannot be recreated overnight.
           </p>
           <p className="text-lg text-ink-muted">
-            Our objective is to preserve what makes the company valuable while helping it become stronger,
-            more scalable and less dependent on any one person. We are not looking to erase the company's
-            identity — we are looking to build on it.
+            Our objective is to preserve what makes the company valuable while helping it become
+            stronger, more scalable and less dependent on any one person. We are not looking to
+            erase the company's identity — we are looking to build on it.
           </p>
         </div>
       </Section>
@@ -75,7 +92,10 @@ function AcqPage() {
         </ul>
       </Section>
 
-      <Section eyebrow="Industries" title="Intelligence-heavy, relationship-driven service businesses">
+      <Section
+        eyebrow="Industries"
+        title="Intelligence-heavy, relationship-driven service businesses"
+      >
         <div className="flex flex-wrap gap-2">
           {[
             "Marketing",
@@ -91,7 +111,10 @@ function AcqPage() {
             "Wealth management",
             "Mortgage services",
           ].map((s) => (
-            <span key={s} className="rounded-full border border-hairline px-4 py-2 text-sm text-foreground">
+            <span
+              key={s}
+              className="rounded-full border border-hairline px-4 py-2 text-sm text-foreground"
+            >
               {s}
             </span>
           ))}
@@ -115,9 +138,9 @@ function AcqPage() {
             ))}
           </ul>
           <p className="text-lg text-ink-muted">
-            We prefer structures that maintain alignment between the founder, the operator and the group.
-            In many acquisitions, the founder retains a meaningful ownership position — receiving liquidity
-            today while continuing to participate in the upside.
+            We prefer structures that maintain alignment between the founder, the operator and the
+            group. In many acquisitions, the founder retains a meaningful ownership position —
+            receiving liquidity today while continuing to participate in the upside.
           </p>
         </div>
       </Section>
@@ -126,7 +149,9 @@ function AcqPage() {
         <ol className="grid gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline md:grid-cols-2 lg:grid-cols-3">
           {process.map((p, i) => (
             <li key={p.t} className="bg-background p-6">
-              <p className="font-display text-3xl text-accent-warm">{String(i + 1).padStart(2, "0")}</p>
+              <p className="font-display text-3xl text-accent-warm">
+                {String(i + 1).padStart(2, "0")}
+              </p>
               <p className="mt-3 font-display text-xl text-foreground">{p.t}</p>
               <p className="mt-2 text-sm text-ink-muted">{p.b}</p>
             </li>
@@ -139,10 +164,19 @@ function AcqPage() {
           {[
             { t: "Long-term orientation", b: "Enduring companies over quick exits." },
             { t: "Founder partnership", b: "We value the expertise that created the company." },
-            { t: "Flexible transactions", b: "Structured around your personal and financial objectives." },
+            {
+              t: "Flexible transactions",
+              b: "Structured around your personal and financial objectives.",
+            },
             { t: "Shared capabilities", b: "Resources portfolio companies could not build alone." },
-            { t: "AI-native transformation", b: "Redesign workflows, preserve knowledge, improve output." },
-            { t: "Cross-portfolio opportunities", b: "New customers, capabilities and relationships." },
+            {
+              t: "AI-native transformation",
+              b: "Redesign workflows, preserve knowledge, improve output.",
+            },
+            {
+              t: "Cross-portfolio opportunities",
+              b: "New customers, capabilities and relationships.",
+            },
           ].map((x) => (
             <div key={x.t} className="rounded-xl border border-hairline bg-surface p-6">
               <p className="font-display text-xl text-foreground">{x.t}</p>
@@ -154,15 +188,19 @@ function AcqPage() {
 
       {/* Not Ready to Sell? Partner With Us. section starts here */}
       <Section eyebrow="Not Ready to Sell?" title="Partner With Us.">
-        <div className="space-y-6 rounded-2xl border border-hairline bg-surface p-8">
+        <div className="space-y-6 glass-panel rounded-2xl p-8">
           <p className="text-lg text-ink-muted">
             You don’t have to sell your business to benefit from the TNAG platform.
           </p>
           <p className="text-lg text-ink-muted">
-            We partner with ambitious business owners who want to stay independent while plugging into our AI Operating System, leadership team, shared services, and growth expertise.
+            We partner with ambitious business owners who want to stay independent while plugging
+            into our AI Operating System, leadership team, shared services, and growth expertise.
           </p>
           <p className="text-lg text-ink-muted">
-            Through flexible joint ventures, strategic partnerships, and revenue-share models, we can help you improve operations, accelerate growth, launch new revenue streams, and build a more valuable business — while you retain ownership and continue running your company.
+            Through flexible joint ventures, strategic partnerships, and revenue-share models, we
+            can help you improve operations, accelerate growth, launch new revenue streams, and
+            build a more valuable business — while you retain ownership and continue running your
+            company.
           </p>
           <p className="text-lg text-ink-muted">
             Keep your business. Gain a growth partner. Build something bigger together.
@@ -177,15 +215,17 @@ function AcqPage() {
       <section id="form" className="border-b border-hairline">
         <div className="container-page grid gap-12 py-20 md:grid-cols-[1fr_1.4fr] md:py-28">
           <div>
-            <p className="text-xs uppercase tracking-widest text-accent-warm">Confidential inquiry</p>
+            <p className="text-xs uppercase tracking-widest text-accent-warm">
+              Confidential inquiry
+            </p>
             <h2 className="mt-4 font-display text-3xl md:text-5xl">Tell us about your business</h2>
             <p className="mt-6 text-ink-muted">
-              Complete the form and a member of our team will contact you directly. Initial conversations
-              are confidential and do not require a formal commitment.
+              Complete the form and a member of our team will contact you directly. Initial
+              conversations are confidential and do not require a formal commitment.
             </p>
           </div>
           <form
-            className="space-y-5 rounded-2xl border border-hairline bg-surface p-8"
+            className="space-y-5 glass-panel rounded-2xl p-8"
             onSubmit={(e) => {
               e.preventDefault();
               setSubmitted(true);
@@ -195,7 +235,8 @@ function AcqPage() {
               <div className="py-10 text-center">
                 <p className="font-display text-2xl text-accent-warm">Thank you.</p>
                 <p className="mt-3 text-ink-muted">
-                  Your inquiry has been received. A member of our team will be in touch confidentially.
+                  Your inquiry has been received. A member of our team will be in touch
+                  confidentially.
                 </p>
               </div>
             ) : (
@@ -211,13 +252,7 @@ function AcqPage() {
                   <Select
                     label="Annual revenue range"
                     name="revenue"
-                    options={[
-                      "Under $300k",
-                      "$300k – $1M",
-                      "$1M – $2M",
-                      "$2M – $5M",
-                      "Over $5M",
-                    ]}
+                    options={["Under $300k", "$300k – $1M", "$1M – $2M", "$2M – $5M", "Over $5M"]}
                   />
                   <Field label="Approx. EBITDA / owner earnings" name="ebitda" />
                   <Field label="Number of employees" name="employees" />
@@ -225,20 +260,32 @@ function AcqPage() {
                 <Select
                   label="Preferred role after transaction"
                   name="role"
-                  options={["Full exit", "Continued leadership", "Advisory role", "Board seat", "Undecided"]}
+                  options={[
+                    "Full exit",
+                    "Continued leadership",
+                    "Advisory role",
+                    "Board seat",
+                    "Undecided",
+                  ]}
                 />
                 <TextArea label="What are you hoping to achieve?" name="goals" rows={3} />
                 <TextArea label="Additional information" name="notes" rows={3} />
-                <input type="text" name="website_url" tabIndex={-1} autoComplete="off" className="hidden" />
+                <input
+                  type="text"
+                  name="website_url"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  className="hidden"
+                />
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center rounded-full bg-accent-warm px-6 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-warm/90"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-accent-warm px-6 py-3 text-sm font-medium text-brand-foreground transition-colors hover:bg-accent-warm/90"
                 >
                   Start a Confidential Conversation
                 </button>
                 <p className="text-xs text-ink-muted">
-                  Information submitted is treated confidentially and used only to evaluate a potential
-                  partnership.
+                  Information submitted is treated confidentially and used only to evaluate a
+                  potential partnership.
                 </p>
               </>
             )}
@@ -262,7 +309,10 @@ function Field({
 }) {
   return (
     <label className="block text-sm">
-      <span className="text-ink-muted">{label}{required && " *"}</span>
+      <span className="text-ink-muted">
+        {label}
+        {required && " *"}
+      </span>
       <input
         type={type}
         name={name}

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageHero, Section } from "@/components/site/Prose";
@@ -21,10 +20,22 @@ export const Route = createFileRoute("/insights")({
 
 const categories = [
   { t: "AI-Native Companies", b: "How AI is changing business models, workflows and delivery." },
-  { t: "Acquisitions", b: "Practical insights on buying, selling, financing and integrating businesses." },
-  { t: "Operations", b: "Systems, processes and management practices for building better companies." },
-  { t: "Founder Succession", b: "Guidance for entrepreneurs considering a sale, partnership or transition." },
-  { t: "Portfolio Building", b: "How shared capabilities, cross-selling and capital allocation create value." },
+  {
+    t: "Acquisitions",
+    b: "Practical insights on buying, selling, financing and integrating businesses.",
+  },
+  {
+    t: "Operations",
+    b: "Systems, processes and management practices for building better companies.",
+  },
+  {
+    t: "Founder Succession",
+    b: "Guidance for entrepreneurs considering a sale, partnership or transition.",
+  },
+  {
+    t: "Portfolio Building",
+    b: "How shared capabilities, cross-selling and capital allocation create value.",
+  },
   { t: "Case Studies", b: "Real examples of operating improvements and AI implementation." },
 ];
 
@@ -118,8 +129,13 @@ function InsightsPage() {
       <Section eyebrow="Library" title="Upcoming articles">
         <ol className="grid gap-3 md:grid-cols-2">
           {library.map((title, i) => (
-            <li key={title} className="flex gap-3 rounded-md border border-hairline px-4 py-3 text-sm text-foreground">
-              <span className="font-display text-accent-warm">{String(i + 1).padStart(2, "0")}</span>
+            <li
+              key={title}
+              className="flex gap-3 rounded-md border border-hairline px-4 py-3 text-sm text-foreground"
+            >
+              <span className="font-display text-accent-warm">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <span>{title}</span>
             </li>
           ))}
@@ -132,12 +148,12 @@ function InsightsPage() {
             <p className="text-xs uppercase tracking-widest text-accent-warm">Newsletter</p>
             <h2 className="mt-4 font-display text-3xl md:text-5xl">The Native AI Brief</h2>
             <p className="mt-6 text-ink-muted">
-              A practical monthly briefing on AI-native companies, acquisitions and building better service
-              businesses.
+              A practical monthly briefing on AI-native companies, acquisitions and building better
+              service businesses.
             </p>
           </div>
           <form
-            className="rounded-2xl border border-hairline bg-surface p-8"
+            className="glass-panel rounded-2xl p-8"
             onSubmit={(e) => {
               e.preventDefault();
               setSubscribed(true);
@@ -167,7 +183,7 @@ function InsightsPage() {
                 />
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center rounded-full bg-accent-warm px-6 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-warm/90"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-accent-warm px-6 py-3 text-sm font-medium text-brand-foreground transition-colors hover:bg-accent-warm/90"
                 >
                   Subscribe
                 </button>

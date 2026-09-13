@@ -19,10 +19,22 @@ export const Route = createFileRoute("/ai-os")({
 });
 
 const agents = [
-  { t: "Sales AI", b: "Prospect research, outreach, lead qualification, follow-up and proposal development." },
-  { t: "Marketing AI", b: "Content production, campaign analysis, research, optimization and reporting." },
-  { t: "Finance AI", b: "Transaction classification, reporting, variance analysis, forecasting and review." },
-  { t: "Operations AI", b: "Workflow coordination, quality control, task management and delivery." },
+  {
+    t: "Sales AI",
+    b: "Prospect research, outreach, lead qualification, follow-up and proposal development.",
+  },
+  {
+    t: "Marketing AI",
+    b: "Content production, campaign analysis, research, optimization and reporting.",
+  },
+  {
+    t: "Finance AI",
+    b: "Transaction classification, reporting, variance analysis, forecasting and review.",
+  },
+  {
+    t: "Operations AI",
+    b: "Workflow coordination, quality control, task management and delivery.",
+  },
   { t: "Customer Success AI", b: "Onboarding, communication, account monitoring and retention." },
 ];
 
@@ -54,13 +66,20 @@ function AiOsPage() {
         lead="AI OS is not a single tool. It is a coordinated system of data, processes, automations, AI agents, knowledge, reporting, human review and continuous improvement."
       >
         <div className="flex flex-wrap gap-2 text-sm">
-          {["Data", "Processes", "Automations", "AI agents", "Knowledge", "Reporting", "Human review", "Continuous improvement"].map(
-            (t) => (
-              <span key={t} className="rounded-full border border-hairline px-4 py-2 text-foreground">
-                {t}
-              </span>
-            ),
-          )}
+          {[
+            "Data",
+            "Processes",
+            "Automations",
+            "AI agents",
+            "Knowledge",
+            "Reporting",
+            "Human review",
+            "Continuous improvement",
+          ].map((t) => (
+            <span key={t} className="rounded-full border border-hairline px-4 py-2 text-foreground">
+              {t}
+            </span>
+          ))}
         </div>
       </Section>
 
@@ -78,7 +97,9 @@ function AiOsPage() {
         </ol>
 
         <div className="mt-16">
-          <h3 className="font-display text-2xl text-foreground">AI agents supporting each function</h3>
+          <h3 className="font-display text-2xl text-foreground">
+            AI agents supporting each function
+          </h3>
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {agents.map((a) => (
               <div key={a.t} className="rounded-xl border border-hairline bg-surface p-5">
@@ -89,20 +110,26 @@ function AiOsPage() {
           </div>
         </div>
 
-        <div className="mt-16 rounded-2xl border border-accent-warm/40 bg-accent-warm/5 p-8 md:p-12">
+        <div className="mt-16 rounded-2xl border border-accent-warm/40 bg-accent-warm/5 p-8 backdrop-blur-sm md:p-12">
           <p className="text-xs uppercase tracking-widest text-accent-warm">Human oversight</p>
           <p className="mt-3 max-w-3xl font-display text-2xl text-foreground">
-            AI OS is built around human accountability. Operators review, approve and refine important
-            outputs and decisions.
+            AI OS is built around human accountability. Operators review, approve and refine
+            important outputs and decisions.
           </p>
           <ul className="mt-6 flex flex-wrap gap-2 text-sm text-ink-muted">
-            {["Quality", "Accuracy", "Context", "Compliance", "Brand alignment", "Customer trust", "Responsible implementation"].map(
-              (s) => (
-                <li key={s} className="rounded-full border border-hairline px-3 py-1">
-                  {s}
-                </li>
-              ),
-            )}
+            {[
+              "Quality",
+              "Accuracy",
+              "Context",
+              "Compliance",
+              "Brand alignment",
+              "Customer trust",
+              "Responsible implementation",
+            ].map((s) => (
+              <li key={s} className="rounded-full border border-hairline px-3 py-1">
+                {s}
+              </li>
+            ))}
           </ul>
         </div>
       </Section>
@@ -119,7 +146,8 @@ function AiOsPage() {
           ))}
         </ol>
         <p className="mt-10 max-w-2xl text-ink-muted">
-          The system supports the team at each stage while keeping the operator responsible for the outcome.
+          The system supports the team at each stage while keeping the operator responsible for the
+          outcome.
         </p>
       </Section>
 

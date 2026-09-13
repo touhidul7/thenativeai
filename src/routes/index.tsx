@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaButton, PageHero, Section } from "@/components/site/Prose";
 import { companies, modelSteps, site } from "@/lib/site-content";
@@ -31,6 +30,7 @@ function Home() {
   return (
     <>
       <PageHero
+        graphic
         eyebrow="An AI-native holding company"
         title={
           <>
@@ -77,7 +77,7 @@ function Home() {
 
       <Section eyebrow="How we build" title="One platform. Two paths.">
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="group relative rounded-2xl border border-hairline bg-surface p-8 transition-colors hover:border-accent-warm/60">
+          <div className="group relative glass-panel rounded-2xl p-8 transition-colors hover:border-accent-warm/60">
             <p className="font-display text-2xl text-accent-warm">We acquire</p>
             <p className="mt-4 text-ink-muted">
               We acquire profitable, founder-led service businesses with strong customer
@@ -92,7 +92,7 @@ function Home() {
               Learn about selling your business <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="group relative rounded-2xl border border-hairline bg-surface p-8 transition-colors hover:border-accent-warm/60">
+          <div className="group relative glass-panel rounded-2xl p-8 transition-colors hover:border-accent-warm/60">
             <p className="font-display text-2xl text-accent-warm">We build</p>
             <p className="mt-4 text-ink-muted">
               We launch new AI-native service companies around strong operators, attractive markets
@@ -148,7 +148,7 @@ function Home() {
                 <li>Operational complexity</li>
               </ul>
             </div>
-            <div className="rounded-xl border border-accent-warm/40 bg-accent-warm/5 p-6">
+            <div className="rounded-xl border border-accent-warm/40 bg-accent-warm/5 p-6 backdrop-blur-sm">
               <p className="font-display text-xl text-accent-warm">AI-native</p>
               <p className="mt-1 text-xs uppercase tracking-widest text-ink-muted">
                 Scales intelligence
@@ -287,7 +287,7 @@ function Home() {
               b: "Accountants, lawyers, bankers, brokers and advisors who work with business owners considering a transition.",
             },
           ].map((x) => (
-            <div key={x.t} className="rounded-xl border border-hairline bg-surface p-6">
+            <div key={x.t} className="glass-panel rounded-xl p-6">
               <p className="font-display text-xl text-foreground">{x.t}</p>
               <p className="mt-3 text-sm text-ink-muted">{x.b}</p>
             </div>
@@ -324,19 +324,25 @@ function Home() {
       </Section>
 
       <section className="relative overflow-hidden">
-        <div className="container-page py-24 md:py-32">
-          <h2 className="max-w-3xl font-display text-4xl md:text-6xl">
-            Build the next generation with us.
-          </h2>
-          <p className="mt-6 max-w-2xl text-lg text-ink-muted">
-            Whether you are looking to sell a company, operate one, build a new business or invest
-            in the platform, we would like to hear from you.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <CtaButton to="/contact">Partner With Us</CtaButton>
-            <CtaButton to="/contact" variant="ghost">
-              Contact Our Team
-            </CtaButton>
+        <div
+          className="hero-atmosphere pointer-events-none absolute inset-0 opacity-80"
+          aria-hidden
+        />
+        <div className="container-page relative py-24 md:py-32">
+          <div className="glass-panel rounded-2xl p-8 md:p-12">
+            <h2 className="max-w-3xl font-display text-4xl md:text-6xl">
+              Build the next generation with us.
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg text-ink-muted">
+              Whether you are looking to sell a company, operate one, build a new business or invest
+              in the platform, we would like to hear from you.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <CtaButton to="/contact">Partner With Us</CtaButton>
+              <CtaButton to="/contact" variant="ghost">
+                Contact Our Team
+              </CtaButton>
+            </div>
           </div>
         </div>
       </section>

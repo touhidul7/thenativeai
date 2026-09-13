@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaButton, PageHero, Section } from "@/components/site/Prose";
 
@@ -20,7 +19,12 @@ export const Route = createFileRoute("/leadership")({
 
 const leaders = [
   { name: "Chris Chetty", title: "Founder", linkedin: "https://www.linkedin.com/in/chrischetty/" },
-  { name: "Claudia Harvey", title: "COO", linkedin: "https://www.linkedin.com/in/claudiaharvey/", url: "http://claudiaharvey.com" },
+  {
+    name: "Claudia Harvey",
+    title: "COO",
+    linkedin: "https://www.linkedin.com/in/claudiaharvey/",
+    url: "http://claudiaharvey.com",
+  },
 ];
 
 const culture = [
@@ -53,7 +57,7 @@ function LeadershipPage() {
                   .slice(0, 2)}
               </div>
               <p className="mt-6 font-display text-2xl text-foreground">
-                <a href={l.url}>{l.name}</a>
+                {l.url ? <a href={l.url}>{l.name}</a> : l.name}
               </p>
               <p className="mt-1 text-sm uppercase tracking-widest text-accent-warm">{l.title}</p>
               {/* <p className="mt-4 text-ink-muted">{l.bio}</p> */}

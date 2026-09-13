@@ -25,35 +25,28 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 function CompaniesPage() {
-  const ownedCompanies = companies.filter(
-    (company) => company.relationship === "owned",
-  );
+  const ownedCompanies = companies.filter((company) => company.relationship === "owned");
 
-  const partnerCompanies = companies.filter(
-    (company) => company.relationship === "partner",
-  );
+  const partnerCompanies = companies.filter((company) => company.relationship === "partner");
 
   return (
     <>
       <PageHero
         eyebrow="Portfolio"
         title="Specialized companies. One shared platform."
-        description="Each Native AI Group company is focused on a distinct customer need while benefiting from shared capabilities across the portfolio."
+        lead="Each Native AI Group company is focused on a distinct customer need while benefiting from shared capabilities across the portfolio."
       />
 
       <Section bordered={false}>
         <p className="max-w-3xl text-lg text-ink-muted">
-          Our companies maintain their own brands, leadership, expertise and
-          customer relationships. They are connected by a common operating
-          philosophy and a shared platform designed to support growth, improve
-          delivery and transfer knowledge.
+          Our companies maintain their own brands, leadership, expertise and customer relationships.
+          They are connected by a common operating philosophy and a shared platform designed to
+          support growth, improve delivery and transfer knowledge.
         </p>
 
         {/* Companies We Own */}
         <div className="mt-16">
-          <h2 className="font-display text-3xl text-foreground md:text-4xl">
-            Companies We Own
-          </h2>
+          <h2 className="font-display text-3xl text-foreground md:text-4xl">Companies We Own</h2>
 
           <div className="mt-8 space-y-px overflow-hidden rounded-2xl border border-hairline bg-hairline">
             {ownedCompanies.map((c) => (
@@ -62,19 +55,13 @@ function CompaniesPage() {
                 className="grid gap-8 bg-background p-8 md:grid-cols-[1fr_2fr] md:p-12"
               >
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-accent-warm">
-                    {c.category}
-                  </p>
+                  <p className="text-xs uppercase tracking-widest text-accent-warm">{c.category}</p>
 
-                  <h2 className="mt-3 font-display text-4xl text-foreground">
-                    {c.name}
-                  </h2>
+                  <h2 className="mt-3 font-display text-4xl text-foreground">{c.name}</h2>
 
-                  <p className="mt-3 text-lg italic text-ink-muted">
-                    {c.tagline}
-                  </p>
+                  <p className="mt-3 text-lg italic text-ink-muted">{c.tagline}</p>
 
-                  {c.comingSoon ? (
+                  {c.comingSoon || !c.href ? (
                     <span className="mt-6 inline-flex rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-widest text-ink-muted">
                       Coming Soon
                     </span>
@@ -124,19 +111,13 @@ function CompaniesPage() {
                 className="grid gap-8 bg-background p-8 md:grid-cols-[1fr_2fr] md:p-12"
               >
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-accent-warm">
-                    {c.category}
-                  </p>
+                  <p className="text-xs uppercase tracking-widest text-accent-warm">{c.category}</p>
 
-                  <h2 className="mt-3 font-display text-4xl text-foreground">
-                    {c.name}
-                  </h2>
+                  <h2 className="mt-3 font-display text-4xl text-foreground">{c.name}</h2>
 
-                  <p className="mt-3 text-lg italic text-ink-muted">
-                    {c.tagline}
-                  </p>
+                  <p className="mt-3 text-lg italic text-ink-muted">{c.tagline}</p>
 
-                  {c.comingSoon ? (
+                  {c.comingSoon || !c.href ? (
                     <span className="mt-6 inline-flex rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-widest text-ink-muted">
                       Coming Soon
                     </span>
@@ -180,14 +161,12 @@ function CompaniesPage() {
         </h2>
 
         <p className="mt-6 max-w-2xl text-lg text-ink-muted">
-          We partner with founders who want to preserve what they have built
-          while creating a stronger path forward.
+          We partner with founders who want to preserve what they have built while creating a
+          stronger path forward.
         </p>
 
         <div className="mt-10">
-          <CtaButton to="/acquisitions">
-            Sell or Partner With Us
-          </CtaButton>
+          <CtaButton to="/acquisitions">Sell or Partner With Us</CtaButton>
         </div>
       </section>
     </>
